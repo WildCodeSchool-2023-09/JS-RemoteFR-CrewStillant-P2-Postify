@@ -1,40 +1,37 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
+import { useEffect, useState } from "react";
 import "./App.css";
+import HeaderText from "./components/HeaderText";
+import MidSection from "./components/MidSection";
+import CardGeneration from "./components/CardGeneration";
 
 function App() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch(`https://api.pexels.com/v1/search?query=fruits&per_page=4`, {
+      headers: {
+        Authorization:
+          "pkrz3obauvMROPUqPm23X1qo6pFVQkjeK34WzNMbavyTToosZhorSTpJ",
+      },
+    })
+      .then((resp) => {
+        return resp.json();
+      })
+      .then((datas) => {
+        setData(datas);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div>
+      <HeaderText />
+      <div className="container">
+        {data &&
+          data.photos.map((a) => (
+            <img src={a.src.small} alt="Marche pas..." key={a.id} />
+          ))}
+      </div>
+      <CardGeneration />
+      <MidSection />
     </div>
   );
 }
