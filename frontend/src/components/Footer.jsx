@@ -20,7 +20,7 @@ function Footer() {
       </div>
 
       <div className="team">
-        <p className="copyright">© Copyright 2030 Wild Code School</p>
+        <p className="copyright">© Copyright 2023 Wild Code School</p>
         <p className="crew">
           Sébastien Lambranca - Thierry Vicente - Gael Katambaie - Mohamed Amine
           Boumendjel
