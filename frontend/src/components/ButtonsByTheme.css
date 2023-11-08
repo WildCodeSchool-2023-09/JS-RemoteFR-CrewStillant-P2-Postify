@@ -1,0 +1,23 @@
+.btn_block {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.btn_theme {
+  height: 1.2rem;
+  width: 4rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: none;
+  box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.615);
+  background-color: white;
+  border-radius: 4px;
+  font-size: 0.4rem;
+  font-weight: bold;
+  font-family: "Inter Tight", sans-serif;
+}
+.btn_theme:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+}
