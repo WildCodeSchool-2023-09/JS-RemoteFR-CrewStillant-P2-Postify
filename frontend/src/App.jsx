@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "./app.css";
 import HeaderText from "./components/HeaderText";
 import MidSection from "./components/MidSection";
 import CardGeneration from "./components/CardGeneration";

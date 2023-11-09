@@ -1,4 +1,4 @@
-import "./HeaderText.css";
+import "./headertext.css";
 
 function HeaderText() {
   return (

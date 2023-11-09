@@ -1,11 +1,11 @@
 import React from "react";
-import "./Form.css";
+import "./form.css";
 
 function Form() {
   return (
     <div className="form">
-      <h1>Contactez-nous</h1>
-      <p>Vous avez une suggestion ou une idée Laissez-nous un message.</p>
+      <h1>Contact Us.</h1>
+      <p>Vous have a suggestion or an idea? Leave us a message.</p>
       <div className="input">
         <div className="coordinates">
           <input className="name" type="text" placeholder="Name" />
