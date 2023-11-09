@@ -3,7 +3,6 @@ import "./app.css";
 import HeaderText from "./components/HeaderText";
 import MidSection from "./components/MidSection";
 import CardGeneration from "./components/CardGeneration";
-import Form from "./components/Form";
 
 function App() {
   const [data, setData] = useState(null);
@@ -33,7 +32,6 @@ function App() {
       </div>
       <CardGeneration />
       <MidSection />
-      <Form />
     </div>
   );
 }

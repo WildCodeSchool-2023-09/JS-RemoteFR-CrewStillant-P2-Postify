@@ -4,8 +4,8 @@ import "./form.css";
 function Form() {
   return (
     <div className="form">
-      <h1>Contact Us.</h1>
-      <p>Vous have a suggestion or an idea? Leave us a message.</p>
+      <h1>Contact Us</h1>
+      <p>If you have a suggestion or an idea, leave us a message.</p>
       <div className="input">
         <div className="coordinates">
           <input className="name" type="text" placeholder="Name" />
