@@ -2,26 +2,26 @@ import PropTypes from "prop-types";
 import data from "../data/data.json";
 import "./buttonsbytheme.css";
 
-function ButtonByTheme(setQuery) {
+function ButtonByTheme({ setQuery }) {
   return (
     <div className="btn_block">
       {data &&
-        data.map((r) =>
-          r.id <= 4 ? (
+        data.map((d) =>
+          d.id <= 4 ? (
             <button
               className="btn_theme"
               type="button"
               key={r.id}
-              onClick={() => setQuery(r.description)}
+              onClick={() => setQuery(d.description)}
             >
-              {r.description.toUpperCase()}
+              {d.description.toUpperCase()}
             </button>
           ) : null
         )}
     </div>
   );
 }
-ButtonByTheme.proTypes = {
-  setQuery: PropTypes.string.isRequired,
+ButtonByTheme.propTypes = {
+  setQuery: PropTypes.func.isRequired,
 };
 export default ButtonByTheme;
