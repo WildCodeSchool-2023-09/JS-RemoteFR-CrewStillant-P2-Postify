@@ -1,7 +1,7 @@
 import "./navbar.css";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
   return (
@@ -16,7 +16,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink to="/images" className="links">
-            images
+            Images
           </NavLink>
           <NavLink to="/Contact" className="links">
             Contact

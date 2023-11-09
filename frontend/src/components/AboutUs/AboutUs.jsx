@@ -1,4 +1,4 @@
-import Envelope from "../assets/images/Envelope.png";
+import Envelope from "../../assets/images/Envelope.png";
 import "./aboutUs.css";
 
 function AboutUS() {
