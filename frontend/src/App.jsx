@@ -4,6 +4,7 @@ import HeaderText from "./components/HeaderText";
 import MidSection from "./components/MidSection";
 import CardGeneration from "./components/CardGeneration";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 function App() {
   const [data, setData] = useState(null);
@@ -34,6 +35,7 @@ function App() {
       <CardGeneration />
       <MidSection />
       <Form />
+      <Footer />
     </div>
   );
 }
