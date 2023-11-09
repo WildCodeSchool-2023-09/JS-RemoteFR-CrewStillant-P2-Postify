@@ -1,5 +1,5 @@
 import Envelope from "../assets/images/Envelope.png";
-import "./AboutUs.css";
+import "./aboutUs.css";
 
 function AboutUS() {
   return (

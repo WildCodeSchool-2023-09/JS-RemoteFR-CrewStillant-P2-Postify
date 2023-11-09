@@ -1,4 +1,4 @@
-import "./WhyUs.css";
+import "./whyUs.css";
 import Free from "../assets/images/Free.png";
 import easy from "../assets/images/easy.png";
 import Beautiful from "../assets/images/Beautiful.png";
