@@ -11,7 +11,7 @@ function ButtonByTheme({ setQuery }) {
             <button
               className="btn_theme"
               type="button"
-              key={r.id}
+              key={d.id}
               onClick={() => setQuery(d.description)}
             >
               {d.description.toUpperCase()}
