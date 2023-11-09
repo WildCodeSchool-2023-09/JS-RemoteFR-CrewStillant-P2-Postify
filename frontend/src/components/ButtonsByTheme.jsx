@@ -1,17 +1,12 @@
-import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import data from "../data/data.json";
-import "./ButtonsByTheme.css";
+import "./buttonsbytheme.css";
 
 function ButtonByTheme(setQuery) {
-  const [themButton, setthemButton] = useState([]);
-  useEffect(() => {
-    setthemButton(data);
-  }, []);
   return (
     <div className="btn_block">
-      {themButton &&
-        themButton.map((r) =>
+      {data &&
+        data.map((r) =>
           r.id <= 4 ? (
             <button
               className="btn_theme"
