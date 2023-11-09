@@ -1,4 +1,4 @@
-import "./midsection.css";
+import "./midSection.css";
 import image from "../assets/MidSectionPic.png";
 
 function MidSection() {
