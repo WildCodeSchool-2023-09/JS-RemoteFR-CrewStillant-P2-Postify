@@ -1,6 +1,6 @@
-import AboutUS from "../components/AboutUs";
-import Presentation from "../components/Presentation";
-import WhyUs from "../components/WhyUs";
+import AboutUS from "../components/AboutUs/AboutUs";
+import Presentation from "../components/Presentation/Presentation";
+import WhyUs from "../components/WhyUS/WhyUs";
 
 function Home() {
   return (

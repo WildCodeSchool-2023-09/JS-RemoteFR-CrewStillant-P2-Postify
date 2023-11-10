@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import Mountain from "../assets/images/Mountain.jpg";
-import Restaurent from "../assets/images/Restaurent.jpg";
-import Metro from "../assets/images/Metro.jpg";
-import Moon from "../assets/images/Moon.jpg";
-import "./Presentation.css";
+import Mountain from "../../assets/images/Mountain.jpg";
+import Restaurent from "../../assets/images/Restaurent.jpg";
+import Metro from "../../assets/images/Metro.jpg";
+import Moon from "../../assets/images/Moon.jpg";
+import "./presentation.css";
 
 function Presentation() {
   return (

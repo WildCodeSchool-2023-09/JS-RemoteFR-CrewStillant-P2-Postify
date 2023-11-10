@@ -1,7 +1,7 @@
-import "./Footer.css";
-import linkdin from "../assets/images/linkedin.png";
-import github from "../assets/images/github.png";
-import twitter from "../assets/images/twitter.png";
+import "./footer.css";
+import linkdin from "../../assets/images/linkedin.png";
+import github from "../../assets/images/github.png";
+import twitter from "../../assets/images/twitter.png";
 
 function Footer() {
   return (

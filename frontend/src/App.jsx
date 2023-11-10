@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import HeaderText from "./components/HeaderText";
-import MidSection from "./components/MidSection";
+import "./appz.css";
+import HeaderText from "./components/HeaderText/HeaderText";
+import MidSection from "./components/MidSection/MidSection";
 import CardGeneration from "./components/CardGeneration";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [data, setData] = useState(null);
@@ -23,6 +26,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <HeaderText />
       <div className="container">
         {data &&
@@ -32,6 +36,8 @@ function App() {
       </div>
       <CardGeneration />
       <MidSection />
+      <Form />
+      <Footer />
     </div>
   );
 }
