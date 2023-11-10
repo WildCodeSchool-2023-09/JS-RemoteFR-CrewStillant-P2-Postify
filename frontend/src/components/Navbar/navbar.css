@@ -2,11 +2,11 @@
     background-color: aliceblue;
     border-radius: 100px;
     margin: 0 300px 0 300px;
-    padding: 2px;
+    padding: 0.005px 20px;
 }
 
 .logo {
-    width: 70px;
+    width: 100px;
     display: flex;
     justify-content: flex-start;
 }
@@ -18,13 +18,13 @@
     font-size: 1.4rem;
     line-height: 1.5;
     color: black;
-    margin: 30px;
+    padding: 25px;
+    border-radius: 20px;
 }
 
 .links:hover {
     background-color: #EDEFEB;
-    border-radius: 8px;
-    padding: 10px;
+
 }
 
 ul {
@@ -33,3 +33,7 @@ ul {
     align-items: center;
     list-style: none;
 }
+
+/* Mobile version */
+
+@media (max-width:450px) {}

@@ -5,6 +5,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Images from "./pages/Images";
 import Contact from "./pages/Contact";
+import Results from "./pages/Results";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
         element: <Images />,
       },
       { path: "/Contact", element: <Contact /> },
+      { path: "/Results", element: <Results /> },
     ],
   },
 ]);
