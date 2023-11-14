@@ -1,0 +1,10 @@
+.midSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imageLetter {
+  max-height: 50%;
+  max-width: 50%;
+}
