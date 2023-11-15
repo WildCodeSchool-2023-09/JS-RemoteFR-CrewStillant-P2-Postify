@@ -18,7 +18,7 @@ function Navbar() {
           <NavLink to="/images" className="links">
             Images
           </NavLink>
-          <NavLink to="/Contact" className="links">
+          <NavLink to="/contact" className="links">
             Contact
           </NavLink>
         </li>

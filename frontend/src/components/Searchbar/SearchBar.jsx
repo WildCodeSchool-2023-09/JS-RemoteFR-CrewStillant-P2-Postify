@@ -32,7 +32,7 @@ function SearchBar({ query, setQuery, setResults }) {
         className="input-search"
         placeholder="Type to Search..."
       />
-      <NavLink to="/Results" className="nav-search" onClick={handleSearch}>
+      <NavLink to="/results" className="nav-search" onClick={handleSearch}>
         Search
       </NavLink>
     </div>
