@@ -5,7 +5,9 @@ function Form() {
   return (
     <div className="form">
       <h1>Contact Us</h1>
-      <p>If you have a suggestion or an idea, leave us a message.</p>
+      <p className="text_form">
+        If you have a suggestion or an idea, leave us a message.
+      </p>
       <div className="input">
         <div className="coordinates">
           <input className="name" type="text" placeholder="Name" />
@@ -13,7 +15,7 @@ function Form() {
         </div>
         <input className="phone" type="text" placeholder="Phone" />
         <textarea className="message" type="text" placeholder="Message" />
-        <div className="button">
+        <div className="btn_form">
           <button type="button">Send Message</button>
         </div>
       </div>
