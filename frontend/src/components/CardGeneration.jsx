@@ -4,9 +4,17 @@ function CardGeneration() {
   const [savedColor, setSavedColor] = useState("#ffffff");
   const [savedFontColor, setSavedFontColor] = useState("000000");
   const [savedFont, setSavedFont] = useState("");
+  const [savedSize, setSavedSize] = useState(10);
 
   return (
     <div>
+      <button type="button" onClick={() => setSavedSize(savedSize + 1)}>
+        Increase
+      </button>
+      <button type="button" onClick={() => setSavedSize(savedSize - 1)}>
+        Decrease
+      </button>
+
       <input
         onChange={(e) => setSavedColor(e.target.value)}
         type="color"
@@ -71,6 +79,7 @@ function CardGeneration() {
             background: savedColor,
             color: savedFontColor,
             fontFamily: savedFont,
+            fontSize: savedSize,
           }}
         >
           Bonjour, je suis un texte de test! XD
