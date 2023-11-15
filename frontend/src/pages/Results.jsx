@@ -1,32 +1,51 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import SearchBar from "../components/Searchbar/SearchBar";
+import ButtonByTheme from "../components/FilterButton/ButtonsByTheme";
 
-function Images() {
+function Results() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(null);
+
+  useEffect(() => {
+    if (query !== "") {
+      fetch(
+        `https://api.pexels.com/v1/search?query=${query}&page=1&per_page=10`,
+        {
+          headers: {
+            Authorization:
+              "pkrz3obauvMROPUqPm23X1qo6pFVQkjeK34WzNMbavyTToosZhorSTpJ",
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => setResults(data.photos))
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+  }, [query]);
+
   return (
     <>
       <div>
-        <SearchBar
-          query={query}
-          setQuery={setQuery}
-          results={results}
-          setResults={setResults}
-        />
+        <ButtonByTheme setQuery={setQuery} />
+        <SearchBar setQuery={setQuery} />
       </div>
       <div className="grid-container">
         {results &&
           results.map((photo) => (
-            <img
-              key={photo.id}
-              src={photo.src.medium}
-              alt={photo.description}
-              className="image-results"
-            />
+            <NavLink to={`/postcard/${photo.id}`} key={photo.id}>
+              <img
+                src={photo.src.medium}
+                alt={photo.alt}
+                className="image-results"
+              />
+            </NavLink>
           ))}
       </div>
     </>
   );
 }
 
-export default Images;
+export default Results;
