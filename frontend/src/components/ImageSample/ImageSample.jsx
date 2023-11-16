@@ -5,25 +5,17 @@ import { NavLink } from "react-router-dom";
 
 function ImageSample({ pictures, setPictures }) {
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = fetch(
-          "https://api.pexels.com/v1/curated?page=1&per_page=10",
-          {
-            headers: {
-              Authorization:
-                "pkrz3obauvMROPUqPm23X1qo6pFVQkjeK34WzNMbavyTToosZhorSTpJ",
-            },
-          }
-        );
-        const data = response.json();
-        setPictures(data.photos);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
+    fetch("https://api.pexels.com/v1/curated?page=1&per_page=10", {
+      headers: {
+        Authorization:
+          "pkrz3obauvMROPUqPm23X1qo6pFVQkjeK34WzNMbavyTToosZhorSTpJ",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setPictures(data.photos))
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   return (
