@@ -34,5 +34,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "react-share": "^4.4.1"
+  }
 }
