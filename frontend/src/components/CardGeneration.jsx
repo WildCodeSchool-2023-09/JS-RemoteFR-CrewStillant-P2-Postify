@@ -3,8 +3,13 @@ import { useState } from "react";
 function CardGeneration() {
   const [savedColor, setSavedColor] = useState("#ffffff");
   const [savedFontColor, setSavedFontColor] = useState("000000");
-  const [savedFont, setSavedFont] = useState("");
-  const [savedSize, setSavedSize] = useState(10);
+  const [savedSize, setSavedSize] = useState(15);
+
+  const [savedFont, setSavedFont] = useState("Arial");
+
+  const handleFontChange = (e) => {
+    setSavedFont(e.target.value);
+  };
 
   return (
     <div>
@@ -25,52 +30,21 @@ function CardGeneration() {
         type="color"
         value={savedFontColor}
       />
-      <select>
-        <option onClick={() => setSavedFont("Arial")} value={savedFont}>
-          Arial
-        </option>
-        <option onClick={() => setSavedFont("Cambria")} value={savedFont}>
-          Cambria
-        </option>
-        <option onClick={() => setSavedFont("Cochin")} value={savedFont}>
-          Cochin
-        </option>
-        <option onClick={() => setSavedFont("Courier New")} value={savedFont}>
-          Courier New
-        </option>
-        <option
-          onClick={() => setSavedFont("Franklin Gothic Medium")}
-          value={savedFont}
-        >
-          Franklin Gothic Medium
-        </option>
-        <option onClick={() => setSavedFont("Georgia")} value={savedFont}>
-          Georgia
-        </option>
-        <option onClick={() => setSavedFont("Gill Sans")} value={savedFont}>
-          Gill Sans
-        </option>
-        <option onClick={() => setSavedFont("Impact")} value={savedFont}>
-          Impact
-        </option>
-        <option onClick={() => setSavedFont("Inter")} value={savedFont}>
-          Inter
-        </option>
-        <option onClick={() => setSavedFont("Verdana")} value={savedFont}>
-          Verdana
-        </option>
-        <option onClick={() => setSavedFont("Tahoma")} value={savedFont}>
-          Tahoma
-        </option>
-        <option
-          onClick={() => setSavedFont("Times New Roman")}
-          value={savedFont}
-        >
-          Times New Roman
-        </option>
-        <option onClick={() => setSavedFont("Trebuchet MS")} value={savedFont}>
-          Trebuchet MS
-        </option>
+
+      <select name="selectFont" onChange={handleFontChange}>
+        <option value="Arial">Arial</option>
+        <option value="Cambria">Cambria</option>
+        <option value="Cochin">Cochin</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Gill Sans">Gill Sans</option>
+        <option value="Impact">Impact</option>
+        <option value="Inter">Inter</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
       </select>
 
       <div>
