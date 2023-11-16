@@ -3,43 +3,44 @@
   flex-direction: column;
   align-items: center;
 }
-
 .input {
   display: flex;
   flex-direction: column;
 }
-
 .coordinates {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 5px;
 }
-
 .name {
+  border: solid rgba(0, 0, 0, 0.301);
   border-radius: 40px;
   margin-right: 5px;
+  padding: 0.5rem;
 }
-
 .email {
+  border: solid rgba(0, 0, 0, 0.301);
   border-radius: 40px;
+  padding: 0.5rem;
 }
-
 .phone {
+  border: solid rgba(0, 0, 0, 0.301);
   border-radius: 40px;
   margin-bottom: 5px;
+  padding: 0.5rem;
 }
-
 .message {
   border-radius: 40px;
   margin-bottom: 5px;
   padding: 1em;
   resize: vertical;
 }
-
-.button {
+.btn_form {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
 .button button {
@@ -58,6 +59,33 @@
   font-style: normal;
   padding: 1.25rem 2rem;
   margin: .6rem .6rem;
+=======
+.btn_form button:hover {
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+  color: black;
+  transition: 0.5s;
+}
+.btn_form button {
+  border-radius: 40px;
+  background-color: black;
+  color: white;
+  cursor: grab;
+  padding: 0.3rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 400px) {
+  .text_form {
+    width: 90%;
+  }
+  .input {
+    width: 90%;
+  }
+  .coordinates {
+    width: 90%;
+  }
+
 }
 
 button:hover {
