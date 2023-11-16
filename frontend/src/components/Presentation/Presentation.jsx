@@ -19,7 +19,7 @@ function Presentation() {
         <img className="end-image" src={Moon} alt="Moon" />
       </div>
       <div className="button">
-        <NavLink to="/" className="start">
+        <NavLink to="/images" className="start">
           Start
         </NavLink>
       </div>
