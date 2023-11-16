@@ -46,7 +46,7 @@
 .start {
     text-decoration: none;
     border-radius: 100px;
-    background-color: #000000;
+    background-color: black;
     color: aliceblue;
     border-style: none;
     box-shadow: none;
@@ -58,6 +58,11 @@
     font-style: normal;
     padding: 1.25rem 2rem;
     margin: .6rem .6rem;
+}
+
+.start:hover {
+    background-color: aliceblue;
+    color: black;
 }
 
 .button {
