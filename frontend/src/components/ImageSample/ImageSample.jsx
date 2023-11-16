@@ -24,7 +24,7 @@ function ImageSample({ pictures, setPictures }) {
     };
 
     fetchData();
-  }, []); // Empty dependency array means this effect runs once, similar to componentDidMount
+  }, []);
 
   return (
     <div className="grid-container">
