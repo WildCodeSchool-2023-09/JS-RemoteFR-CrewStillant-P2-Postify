@@ -1,12 +1,11 @@
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SearchBar from "../components/Searchbar/SearchBar";
 import ButtonByTheme from "../components/FilterButton/ButtonsByTheme";
-import ImageSample from "../components/ImageSample/ImageSample";
 
-function Images() {
+function Results() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(null);
-  const [pictures, setPictures] = useState([]);
 
   useEffect(() => {
     if (query !== "") {
@@ -28,12 +27,25 @@ function Images() {
   }, [query]);
 
   return (
-    <div>
-      <ButtonByTheme setQuery={setQuery} />
-      <SearchBar setQuery={setQuery} results={results} />
-      <ImageSample pictures={pictures} setPictures={setPictures} />
-    </div>
+    <>
+      <div>
+        <ButtonByTheme setQuery={setQuery} />
+        <SearchBar setQuery={setQuery} />
+      </div>
+      <div className="grid-container">
+        {results &&
+          results.map((photo) => (
+            <NavLink to={`/postcard/${photo.id}`} key={photo.id}>
+              <img
+                src={photo.src.medium}
+                alt={photo.alt}
+                className="image-results"
+              />
+            </NavLink>
+          ))}
+      </div>
+    </>
   );
 }
 
-export default Images;
+export default Results;
