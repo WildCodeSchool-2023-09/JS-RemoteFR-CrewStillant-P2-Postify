@@ -9,7 +9,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
+<<<<<<< HEAD
     "react-share": "^4.4.1"
+=======
+>>>>>>> a774ce85a275ee71c0992bb83cb85291f3dda33c
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
