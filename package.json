@@ -34,8 +34,5 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3"
   },
-  "main": "index.js",
-  "dependencies": {
-    "uploader": "^3.48.3"
-  }
+  "main": "index.js"
 }
