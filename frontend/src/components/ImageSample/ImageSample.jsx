@@ -7,7 +7,7 @@ function ImageSample({ pictures, setPictures }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
+        const response = fetch(
           "https://api.pexels.com/v1/curated?page=1&per_page=10",
           {
             headers: {
@@ -16,7 +16,7 @@ function ImageSample({ pictures, setPictures }) {
             },
           }
         );
-        const data = await response.json();
+        const data = response.json();
         setPictures(data.photos);
       } catch (error) {
         console.error(error);
