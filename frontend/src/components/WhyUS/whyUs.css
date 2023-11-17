@@ -32,3 +32,20 @@
     font-family: 'Inter Tight',
         sans-serif;
 }
+
+/*   Mobile Version  */
+
+@media screen and (max-width: 450px) {
+    .Why-us {
+        padding: 0;
+        margin: auto;
+    }
+
+    .why-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+}

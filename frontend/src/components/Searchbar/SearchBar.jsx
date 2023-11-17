@@ -1,27 +1,17 @@
 import PropTypes from "prop-types";
 import "./searchBar.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
-function SearchBar({ query, setQuery, setResults }) {
+function SearchBar({ setQuery }) {
+  const [inputValue, setInputValue] = useState("");
+
   const handleInputChange = (e) => {
-    setQuery(e.target.value);
+    setInputValue(e.target.value);
   };
 
   const handleSearch = () => {
-    fetch(
-      `https://api.pexels.com/v1/search?query=${query}&page=1&per_page=10`,
-      {
-        headers: {
-          Authorization:
-            "pkrz3obauvMROPUqPm23X1qo6pFVQkjeK34WzNMbavyTToosZhorSTpJ",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => setResults(data.photos))
-      .catch((err) => {
-        console.error(err);
-      });
+    setQuery(inputValue);
   };
 
   return (
@@ -40,9 +30,7 @@ function SearchBar({ query, setQuery, setResults }) {
 }
 
 SearchBar.propTypes = {
-  query: PropTypes.string.isRequired,
   setQuery: PropTypes.func.isRequired,
-  setResults: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
