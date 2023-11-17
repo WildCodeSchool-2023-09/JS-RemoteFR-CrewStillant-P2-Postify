@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Images from "./pages/Images";
 import Contact from "./pages/Contact";
 import Results from "./pages/Results";
-import Nature from "./pages/Nature";
 import PostCard from "./pages/PostCard";
 
 const router = createBrowserRouter([
@@ -18,12 +17,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "images",
+        path: "/images",
         element: <Images />,
       },
       { path: "/contact", element: <Contact /> },
       { path: "/results", element: <Results /> },
-      { path: "/nature/:query", element: <Nature /> },
       {
         path: "/postcard/:id",
         element: <PostCard />,
